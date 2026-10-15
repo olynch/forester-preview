@@ -21,7 +21,7 @@
       in
         {
           packages.default = pkgs.haskellPackages.callPackage ./default.nix {};
-          packages.forester = forester.packages.${system}.forester;
+          packages.forester = forester.packages.${system}.default;
 
           devShells.default = pkgs.mkShell {
             buildInputs = with pkgs; [
